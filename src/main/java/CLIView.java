@@ -6,15 +6,26 @@ import org.apache.commons.io.IOUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.json.JSONObject;
 
-import java.awt.*;
+import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import static Utils.LCRConstants.*;
+import static Utils.LCRConstants.DESKTOP_SUPPORTED;
+import static Utils.LCRConstants.GET_QUESTIONS_QUERY;
+import static Utils.LCRConstants.PROGRAM_STARTED;
+import static Utils.LCRConstants.RANDOM_QUESTION_URL_PREFIX;
+import static Utils.LCRConstants.SERVICE_URL;
+
 
 @Slf4j
 public class CLIView {
